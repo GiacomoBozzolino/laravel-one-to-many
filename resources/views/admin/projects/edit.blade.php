@@ -37,7 +37,7 @@
                         <label class="control-label" >Copertina</label>
                         <input type="file" id="img" name="img" class="form-control" placeholder="img" value="{{old('img')?? $project->link}}">
                     </div>
-
+                    
                     <div class="form-group">
                         <label class="control-label" >Tipologia</label>
                         <select class="form-control" name="type_id" id="type_id">
