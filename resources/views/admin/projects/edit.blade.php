@@ -37,6 +37,16 @@
                         <label class="control-label" >Copertina</label>
                         <input type="file" id="img" name="img" class="form-control" placeholder="img" value="{{old('img')?? $project->link}}">
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label" >Tipologia</label>
+                        <select class="form-control" name="type_id" id="type_id">
+                            <option value="">Seleziona una tipologia</option>
+                            @foreach($types as $type)
+                                <option {{$type->id == old('type_id', $project->type_id) ? 'selected': ''}} value="{{$type->id}}">{{$type->name}} </option>
+                            @endforeach
+                        </select>
+                    </div>
                     
                     <div class=" form-group mt-2">
                         <button type="submit" class="btn btn-success"> Salva</button>
