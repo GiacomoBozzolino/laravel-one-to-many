@@ -14,12 +14,15 @@
                   <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Link</th>
+                    <th scope="col">Tipologia</th>
+                    <th scope="col">Copertina</th>
                   </tr>
                 </thead>
                 <tbody>
                     <tr>
-                      <td>{{$project-> name}}</td>
-                      <td>{{$project-> link}}</td>
+                      <td>{{$project->name}}</td>
+                      <td>{{$project->link}}</td>
+                      <td>{{$project->type->name}}</td>
                       <td>
                         <img class="img-thumbnail img-fluid" src="{{ asset('storage/'.$project-> img)}}" alt=""></td>  
                     </tr>
